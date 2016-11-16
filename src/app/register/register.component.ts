@@ -25,7 +25,34 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  /*// callback - jobService example longform
+  const jobService = {
+    getJobs(shouldGetJob) { //method
+      return { //returning an object
+        subscribe(successCB, failCB) { //with two parmaters
+          if (shouldGetJob) {
+            successCB('I got the job...');
+          } else {
+            failCB('I did not get the jobs...');
+          }
+        }
+      }
+    }
+  };
+
+  // to call
+  jobService.getJobs(true).subscribe((message) => {
+    console.log(message);
+  }, (message) => {
+    console.log(message);
+  })*/
+
   ngOnInit() {
+    // async call test
+    setTimeout( () => {
+      console.log('i\'m late');
+    }, 2000 );
+    
   }
 
   get jobSelected() {

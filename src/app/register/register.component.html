@@ -1,11 +1,11 @@
 <h1>Register</h1>
-<div class="register-form"> 
-  <form>
+<div class="register-form">
+  <form #registerForm="ngForm">
     <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Enter Name" [(ngModel)]="colonist.name" name="name">
+    <input type="text" id="name" placeholder="Enter Name" [(ngModel)]="colonist.name" name="name" required>
 
     <label for="age">Age</label>
-    <input type="number" id="age" placeholder="Enter Age" [(ngModel)]="colonist.age" name="age">
+    <input type="number" id="age" placeholder="Enter Age" [(ngModel)]="colonist.age" name="age" required>
 
     <label for="job">Job</label>
     <select id="job" [(ngModel)]="colonist.job_id" name="job_id">
@@ -13,8 +13,8 @@
       <option *ngFor="let job of marsJobs" [value]="job.id">{{ job.name }} - {{ job.id }}</option>
     </select>
 
-    <button [disabled]="jobSelected" id="register">Check-In</button>
-  </form>
+    <button [disabled]="jobSelected || registerForm.invalid" type="">Register</button>
+  </form> 
 </div>
 
 {{ colonist.name }} | {{ colonist.age }} | {{ colonist.job_id }}
