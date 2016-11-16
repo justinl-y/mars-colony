@@ -2,14 +2,17 @@
 
 <div class="report-encounter-form">
   <form>
-    <select>
-
-
+    <label for="alen-type">Alien Type</label>
+    <select id="alien-type" [(ngModel)]="encounter.atype" name="atype">
+      <option [value]="NO_ALIEN_SELECTED">Select an alien...</option>
+      <option *ngFor="let alien of marsAliens" [value]="alien.type">{{ alien.type }} - {{ alien.id }}</option>
     </select>
 
     <label for="encounter">Encounter</label>
-    <input type="text" id="encounter" placeholder="Enter encounter" [(ngModel)]="encounter.name" name="name">
+    <textarea id="encounter" placeholder="Enter encounter" [(ngModel)]="encounter.name" name="action">
+    </textarea>
 
     <button [disabled]="alienSelected">Report</button>
   </form>
 </div>
+

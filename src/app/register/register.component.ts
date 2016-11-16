@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   constructor( jobsService: JobsService ) {
     this.colonist = new NewColonist( null, null, this.NO_JOB_SELECTED );
 
-    jobsService.getJobs().subscribe((jobs) => {
+    jobsService.getJobs().subscribe(( jobs ) => {
       //console.log(jobs);
       this.marsJobs = jobs;
     }, (err) => {
