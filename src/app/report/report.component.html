@@ -2,7 +2,7 @@
 
 <div class="report-encounter-form">
   <form>
-    <label for="alen-type">Alien Type</label>
+    <label for="alien-type">Alien Type</label>
     <select id="alien-type" [(ngModel)]="encounter.atype" name="atype">
       <option [value]="NO_ALIEN_SELECTED">Select an alien...</option>
       <option *ngFor="let alien of marsAliens" [value]="alien.type">{{ alien.type }} - {{ alien.id }}</option>
