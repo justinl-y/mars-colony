@@ -24,7 +24,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ////ListTestComponent,
+    //ListTestComponent,
     WelcomeComponent,
     RegisterComponent,
     EncountersComponent,

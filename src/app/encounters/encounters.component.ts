@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Encounter } from '../models';
 
 @Component({
   selector: 'app-encounters',
