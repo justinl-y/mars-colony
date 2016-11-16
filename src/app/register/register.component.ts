@@ -6,7 +6,7 @@ import JobsService from '../services/jobs.service';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [JobsService]
+  providers: [JobsService],
 })
 export class RegisterComponent implements OnInit {
   colonist: NewColonist;
@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
 
   NO_JOB_SELECTED = '(none);'
 
-  constructor(jobsService: JobsService) {
+  constructor( jobsService: JobsService ) {
     this.colonist = new NewColonist( null, null, this.NO_JOB_SELECTED );
 
     jobsService.getJobs().subscribe((jobs) => {
