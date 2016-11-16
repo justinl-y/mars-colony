@@ -5,6 +5,6 @@ label, input, select, button {
     display: block;
 }
 
-input, select, button {
+h1, input, select, button {
     margin-bottom: 1rem;
 }
