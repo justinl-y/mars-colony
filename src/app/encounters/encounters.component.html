@@ -1,20 +1,16 @@
 <h1>Encounters</h1>
 
+<div class="button" ng-click="$state.go('report')">Report Encounter</div>
+
 <ul class="encounter-list">
   <li *ngFor="let a of marsEncounters">
     <div>
-      Date: {{ a.date }}
-    </div>
-    <div>
-      Type: {{ a.atype }}
-    </div>
-    <div>
-      Action: {{ a.action }}
+      Date: {{ a.date }} | Type: {{ a.atype }} | Action: {{ a.action }}
     </div>
   </li>
 </ul>
 
 <footer>
   <!--<p>This is the footer</p>-->
-  <div class="button" ng-click="$state.go('report')">Report Encounter</div>
+  
 </footer>

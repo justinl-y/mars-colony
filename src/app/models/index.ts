@@ -25,14 +25,22 @@ export class NewColonist {
      ) {}
  }
 
-export class Encounter {
+export class NewEncounter {
     constructor(
-        public id: number,
+        //public id: number,
+        //public colonist_id: number,
         public date: string,
-        public colonist_id: number,
         public atype: string,
-        public action: string
+        public action: string,
     ) {}
+}
+
+interface Encounter {
+    // id: string,
+    // colonist_id; number,
+    date: string,
+    atype: string,
+    action: string,
 }
 
 export class Alien {

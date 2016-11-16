@@ -7,7 +7,7 @@
     <label for="Age">Age</label>
     <input type="number" id="age" placeholder="Enter Age" [(ngModel)]="colonist.age" name="age">
 
-    <label for="job">Occupation</label>
+    <label for="job">Job</label>
     <select id="job" [(ngModel)]="colonist.job_id" name="job_id">
       <option [value]="NO_JOB_SELECTED">Select a job...</option>
       <option *ngFor="let job of marsJobs" [value]="job.id">{{ job.name }} - {{ job.id }}</option>

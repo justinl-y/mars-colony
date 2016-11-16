@@ -1,3 +1,15 @@
-<p>
-  report works!
-</p>
+<h1>Report Encounter</h1>
+
+<div class="report-encounter-form">
+  <form>
+    <select>
+
+
+    </select>
+
+    <label for="encounter">Encounter</label>
+    <input type="text" id="encounter" placeholder="Enter encounter" [(ngModel)]="encounter.name" name="name">
+
+    <button [disabled]="alienSelected">Report</button>
+  </form>
+</div>
