@@ -39,7 +39,7 @@ interface Encounter {
     // id: string,
     // colonist_id; number,
     date: string,
-    atype: string,
+    atype: Alien,
     action: string,
 }
 

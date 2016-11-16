@@ -5,7 +5,7 @@ import { Alien } from '../models';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class AliensService {
+export default class AliensService {
 
   ALIENS_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
 
