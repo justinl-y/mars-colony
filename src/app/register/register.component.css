@@ -1,0 +1,10 @@
+/*styles for register component */
+
+label, input, select, button {
+    width: 100%;
+    display: block;
+}
+
+input, select, button {
+    margin-bottom: 1rem;
+}

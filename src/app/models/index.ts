@@ -1,10 +1,20 @@
-export class Colonist {
+export class NewColonist {
     constructor(
+        //public id: number,
         public name: string,
-        public job: Job,
-        public id: number,
-        public age: number
+        public age: number,
+        public job_id: string,
+        //public job: Job,
     ) {}
+ }
+
+ interface Colonist {
+     // id: number,
+     name: string,
+     id: number,
+     age: number,
+     job: Job,
+     //job_id: string,
  }
 
  export class Job {
