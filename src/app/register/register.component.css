@@ -8,3 +8,7 @@ label, input, select, button {
 h1, input, select, button {
     margin-bottom: 1rem;
 }
+
+/*.register-form .ng-invalid input[type="text"] {
+    border-color: red;
+}*/

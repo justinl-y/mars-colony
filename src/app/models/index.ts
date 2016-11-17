@@ -1,6 +1,6 @@
-export class NewColonist {
+export class Colonist {
     constructor(
-        //public id: number,
+        public id: number,
         public name: string,
         public age: number,
         public job_id: string,
@@ -8,14 +8,14 @@ export class NewColonist {
     ) {}
  }
 
- interface Colonist {
+ /*interface IColonist {
      // id: number,
      name: string,
      id: number,
      age: number,
      job: Job,
      //job_id: string,
- }
+ }*/
 
  export class Job {
      constructor(
@@ -25,9 +25,9 @@ export class NewColonist {
      ) {}
  }
 
-export class NewEncounter {
+export class Encounter {
     constructor(
-        //public id: number,
+        public id: number,
         public date: string,
         //public colonist_id: number,
         public atype: string,
@@ -35,8 +35,8 @@ export class NewEncounter {
     ) {}
 }
 
-interface Encounter {
-    // id: string,
+interface IEncounter {
+    id: string,
     date: string,
     // colonist_id; number,
     atype: Alien,
