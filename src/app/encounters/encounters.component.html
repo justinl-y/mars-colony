@@ -1,6 +1,6 @@
 <h1>Encounters</h1>
 
-<div class="button" ng-click="$state.go('report')">Report Encounter</div>
+<div class="button" (click)="onClick($event)">Report Encounter</div>
 
 <ul class="encounter-list">
   <li *ngFor="let e of marsEncounters">
@@ -9,9 +9,6 @@
     </div>
   </li>
 </ul>
-
-
-
 
 <footer>
   <!--<p>This is the footer</p>-->

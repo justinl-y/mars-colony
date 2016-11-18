@@ -6,7 +6,6 @@ import ColonistsService from '../services/colonists.service';
 import { cantBe } from '../shared/validators';
 import { Router, ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,13 +16,11 @@ export class RegisterComponent implements OnInit {
   marsJobs: Job[];
   registerForm: FormGroup;
 
-  //marsColonist: IColonist; ////////
-
   NO_JOB_SELECTED = '(none);'
 
   constructor( private jobsService: JobsService,
                 private colonistService: ColonistsService,
-                private router: Router, private route: ActivatedRoute  ) {
+                private router: Router, private route: ActivatedRoute ) {
 
     jobsService.getJobs().subscribe(( jobs ) => {
       this.marsJobs = jobs;
@@ -85,8 +82,8 @@ export class RegisterComponent implements OnInit {
       const colonist = new Colonist(name, age, job_id);
 
       //console.log(colonist);
-      this.colonistService.submitColonist(colonist).subscribe( ( colonist ) => {
-        sessionStorage.setItem('id', colonist.id.toString());
+      this.colonistService.submitColonist(colonist).subscribe( ( post_colonist ) => {
+        sessionStorage.setItem('id', post_colonist.id.toString());
 
         this.router.navigate(['../encounters']);
       }, (err) => {

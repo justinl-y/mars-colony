@@ -12,6 +12,7 @@ export default class EncountersService {
   constructor(private http: Http) {}
 
   getEncounters(): Observable<IEncounter[]> {
+  //getEncounters(): Observable<Object[]> {
     return this.http
         .get(this.ENCOUNTER_JSON)
         .map((res: Response) => res.json().encounters);

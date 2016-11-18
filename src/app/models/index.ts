@@ -57,3 +57,9 @@ export interface IAlien {
     id: number,
     description: string;
 }
+
+export interface ICommanderBlog {
+    id: number,
+    title: string,
+    content: string
+}

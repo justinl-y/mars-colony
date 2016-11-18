@@ -12,7 +12,7 @@ export default class ColonistsService {
   constructor(private http: Http) {}
 
   getColonists(): Observable<IColonist[]> {
-    return this.http
+      return this.http
         .get(this.COLONIST_JSON)
         .map((res: Response) => res.json().colonists);
   }

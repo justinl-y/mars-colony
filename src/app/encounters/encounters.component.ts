@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEncounter } from '../models';
 import EncountersService from '../services/encounters.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component( {
   selector: 'app-encounters',
@@ -11,14 +12,24 @@ import EncountersService from '../services/encounters.service';
 export class EncountersComponent implements OnInit {
   marsEncounters: IEncounter[];
 
-  constructor( encountersService: EncountersService ) {
-    encountersService.getEncounters().subscribe( ( encounters ) => {
-      this.marsEncounters = encounters;
+  constructor( private encountersService: EncountersService,
+               private router: Router, private route: ActivatedRoute ) {
+    encountersService.getEncounters().subscribe( ( get_encounters ) => {
+      this.marsEncounters = get_encounters;
+
+      //console.log( get_encounters );
     }, ( err ) => {
       console.log( err );
     });
   }
 
   ngOnInit() {
+  }
+
+  onClick(event) {
+    event.preventDefault();
+
+    //console.log('clicked');
+    this.router.navigate(['../report']);
   }
 }

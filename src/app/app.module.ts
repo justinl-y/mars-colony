@@ -10,14 +10,18 @@ import { RegisterComponent } from './register/register.component';
 import { EncountersComponent } from './encounters/encounters.component';
 import { ReportComponent } from './report/report.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CommandersBlogComponent } from './commanders-blog/commanders-blog.component'; //using rounting functionalities for multiple components
 
-import { RouterModule, Routes } from '@angular/router'; //using rounting functionalities for multiple components
+import { RouterModule, Routes } from '@angular/router';
+
 
 const appRoutes: Routes = [
-  { path: 'welcome', component: WelcomeComponent },
+  { path: '', component: WelcomeComponent },
+  { path: 'welcome', component: WelcomeComponent }, // remove from final code
   { path: 'register', component: RegisterComponent },
   { path: 'encounters', component: EncountersComponent },
   { path: 'report', component: ReportComponent },
+  { path: 'commanders-blog', component: CommandersBlogComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -29,7 +33,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     EncountersComponent,
     ReportComponent,
-    PageNotFoundComponent
+    CommandersBlogComponent,
+    PageNotFoundComponent,
+    CommandersBlogComponent
   ],
   imports: [
     BrowserModule,
