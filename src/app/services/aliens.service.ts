@@ -14,5 +14,5 @@ export default class AliensService {
       return this.http
           .get(this.ALIENS_JSON)
           .map((res: Response) => res.json().aliens);
-      }
-  }
+    }
+}

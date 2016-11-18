@@ -23,7 +23,7 @@ export default class ColonistsService {
     headers.append( 'Content-Type', 'application/json' );
 
     return this.http
-        .post( this.COLONIST_JSON, { colonist }, { headers } ) //
+        .post( this.COLONIST_JSON, { colonist }, { headers } )
         .map( ( res: Response) => res.json().colonist );
   }
 }

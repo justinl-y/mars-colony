@@ -46,7 +46,7 @@ export class ReportComponent implements OnInit {
     if( this.reportForm.invalid ) {
       // for invalid
     } else {
-      const colonist_id = 4;
+      const colonist_id = parseInt(sessionStorage.getItem('id'));
       const alien_type = this.reportForm.get('type').value;
       const action = this.reportForm.get('action').value;
       const encounter = new Encounter( action, alien_type, colonist_id, this.getDate() );

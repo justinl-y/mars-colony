@@ -47,7 +47,6 @@ export class Alien {
     constructor(
         public type: string,
         public submitted_by: string,
-        //public id: number,
         public description: string,
     ) {}
 }

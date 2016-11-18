@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import { Colonist, Job } from '../models';
+import { Colonist, Job, IColonist } from '../models';
 import JobsService from '../services/jobs.service';
 import ColonistsService from '../services/colonists.service';
 import { cantBe } from '../shared/validators';
 import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -15,6 +16,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class RegisterComponent implements OnInit {
   marsJobs: Job[];
   registerForm: FormGroup;
+
+  //marsColonist: IColonist; ////////
 
   NO_JOB_SELECTED = '(none);'
 
@@ -81,8 +84,10 @@ export class RegisterComponent implements OnInit {
       const job_id = this.registerForm.get('job_id').value;
       const colonist = new Colonist(name, age, job_id);
 
-      console.log(colonist);
-      this.colonistService.submitColonist(colonist).subscribe( () => {
+      //console.log(colonist);
+      this.colonistService.submitColonist(colonist).subscribe( ( colonist ) => {
+        sessionStorage.setItem('id', colonist.id.toString());
+
         this.router.navigate(['../encounters']);
       }, (err) => {
         console.log(err);
