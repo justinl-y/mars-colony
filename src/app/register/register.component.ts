@@ -2,34 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { Colonist, Job } from '../models';
 import JobsService from '../services/jobs.service';
+import ColonistsService from '../services/colonists.service';
 import { cantBe } from '../shared/validators';
-
-/*const notNone = (value) => {
-  if (value === '(none)') {
-    return false;
-   } else {
-    return true;
-  }
-}*/
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [JobsService],
+  providers: [JobsService, ColonistsService],
 })
 export class RegisterComponent implements OnInit {
-  //colonist: NewColonist;
   marsJobs: Job[];
   registerForm: FormGroup;
 
   NO_JOB_SELECTED = '(none);'
 
-  constructor( jobsService: JobsService ) {
-    //this.colonist = new NewColonist( null, null, this.NO_JOB_SELECTED );
+  constructor( private jobsService: JobsService,
+                private colonistService: ColonistsService,
+                private router: Router, private route: ActivatedRoute  ) {
 
     jobsService.getJobs().subscribe(( jobs ) => {
-      //console.log(jobs);
       this.marsJobs = jobs;
     }, (err) => {
         console.log(err);
@@ -58,12 +51,6 @@ export class RegisterComponent implements OnInit {
     console.log(message);
   })*/
 
-  /*cantBe(value: string): ValidatorFn {
-    return (control: AbstractControl): {[key: string]: any} => {
-      return control.value === this.NO_JOB_SELECTED ? {'cant be none': { value }} : null;
-    };
-  }*/
-
   tooOld(value: number): ValidatorFn {
     return (control: AbstractControl): {[key: string]: any} => {
       return control.value > 100 ? {'too old': { value }} : null;
@@ -85,17 +72,21 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(event) {
     event.preventDefault();
-    //console.log(this.registerForm);
 
     if(this.registerForm.invalid) {
-
+       // for invalid
     } else {
-      const id = null;
       const name = this.registerForm.get('name').value; //check for better way to get values from form
       const age = this.registerForm.get('age').value;
       const job_id = this.registerForm.get('job_id').value;
+      const colonist = new Colonist(name, age, job_id);
 
-      console.log('Register new colonist', new Colonist(id, name, age, job_id));
+      console.log(colonist);
+      this.colonistService.submitColonist(colonist).subscribe( () => {
+        this.router.navigate(['../encounters']);
+      }, (err) => {
+        console.log(err);
+      });
     }
   }
 }

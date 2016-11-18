@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Job } from '../models';
+import { IJob } from '../models';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -11,7 +11,7 @@ export default class JobsService {
 
   constructor(private http: Http) {}
 
-  getJobs(): Observable<Job[]> {
+  getJobs(): Observable<IJob[]> {
     return this.http
         .get(this.JOBS_JSON)
         .map((res: Response) => res.json().jobs);
