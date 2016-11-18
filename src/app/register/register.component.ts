@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { Colonist, Job } from '../models';
 import JobsService from '../services/jobs.service';
+import { cantBe } from '../shared/validators';
 
 /*const notNone = (value) => {
   if (value === '(none)') {
@@ -57,11 +58,11 @@ export class RegisterComponent implements OnInit {
     console.log(message);
   })*/
 
-  cantBe(value: string): ValidatorFn {
+  /*cantBe(value: string): ValidatorFn {
     return (control: AbstractControl): {[key: string]: any} => {
       return control.value === this.NO_JOB_SELECTED ? {'cant be none': { value }} : null;
     };
-  }
+  }*/
 
   tooOld(value: number): ValidatorFn {
     return (control: AbstractControl): {[key: string]: any} => {
@@ -78,7 +79,7 @@ export class RegisterComponent implements OnInit {
     this.registerForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(2)]), 
       age: new FormControl('', [Validators.required, this.tooOld(100)]), //more validator functions - no negative numbers
-      job_id: new FormControl(this.NO_JOB_SELECTED, [this.cantBe(this.NO_JOB_SELECTED)])
+      job_id: new FormControl(this.NO_JOB_SELECTED, [cantBe(this.NO_JOB_SELECTED)])
     });
   }
 

@@ -16,4 +16,3 @@ export default class AliensService {
           .map((res: Response) => res.json().aliens);
       }
   }
-  

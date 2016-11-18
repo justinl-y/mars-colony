@@ -8,14 +8,12 @@ export class Colonist {
     ) {}
  }
 
- /*interface IColonist {
-     // id: number,
+export interface IColonist {
      name: string,
      id: number,
      age: number,
-     job: Job,
-     //job_id: string,
- }*/
+     job_id: string,
+ }
 
  export class Job {
      constructor(
@@ -25,7 +23,37 @@ export class Colonist {
      ) {}
  }
 
-export class Encounter {
+ export interface IJob {
+    name: string,
+    id: number,
+    description: string
+ }
+
+export class NewEncounter {
+    constructor(
+        //public id: number,
+        public action: string,
+        public atype: string,
+        public colonist_id: number,
+        public date: string,
+
+        /*public atype: string,
+        public date: string,
+        public action: string,
+        public colonist_id: number,*/
+
+    ) {}
+}
+
+export interface Encounter {
+    id: number,
+    action: string,
+    atype: string,
+    colonist_id: string,
+    date: string,
+}
+
+/*export class Encounter {
     constructor(
         public id: number,
         public date: string,
@@ -33,21 +61,28 @@ export class Encounter {
         public atype: string,
         public action: string,
     ) {}
-}
+}*/
 
-interface IEncounter {
+/*interface IEncounter {
     id: string,
     date: string,
     // colonist_id; number,
     atype: Alien,
     action: string,
-}
+}*/
 
 export class Alien {
     constructor(
-        type: string,
-        submitted_by: string,
-        id: number,
-        description: string,
+        public type: string,
+        public submitted_by: string,
+        public id: number,
+        public description: string,
     ) {}
+}
+
+export interface IAlien {
+    type: string,
+    submitted_by: string,
+    id: number,
+    description: string;
 }
