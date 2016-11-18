@@ -10,8 +10,8 @@ export default class CommandersBlogService {
   COMMANDERS_BLOG_JSON = 'http://fourth.academy.red/wp-json/wp/v2/posts/';
 
   constructor(private http: Http) { }
-    //getCommandersBlogPosts(): Observable<ICommanderBlog[]>{
-      getCommandersBlogPosts() {
+    getCommandersBlogPosts(): Observable<ICommanderBlog[]>{
+    //getCommandersBlogPosts() {
       return this.http
         .get(this.COMMANDERS_BLOG_JSON)
         .map((res: Response) => res.json());

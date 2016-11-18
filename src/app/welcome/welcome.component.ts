@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   template: `<h1>Welcome to Mars</h1>
              <h2>We hope you hope you like your stay!</h2>
              <a routerLink="/register" routerLinkActive="active">Enter</a>`,
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
 

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({ //apply component decorator to class - metadata
   selector: 'app-root', //css selector for the html element where we want the component to load
   templateUrl: './app.component.html', //the content we want to load inside the selector
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 //class
 export class AppComponent {

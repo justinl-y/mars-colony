@@ -15,7 +15,7 @@ class Apple {
 @Component({
   selector: 'app-list-test',
   templateUrl: './list-test.component.html',
-  styleUrls: ['./list-test.component.css']
+  styleUrls: ['./list-test.component.scss']
 })
 
 export class ListTestComponent implements OnInit {

@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-commanders-blog',
   templateUrl: './commanders-blog.component.html',
-  styleUrls: ['./commanders-blog.component.css'],
+  styleUrls: ['./commanders-blog.component.scss'],
   providers: [CommamdersBlogService],
 })
 export class CommandersBlogComponent implements OnInit {
@@ -17,9 +17,11 @@ export class CommandersBlogComponent implements OnInit {
                 private route: ActivatedRoute ) { 
 
     commandersBlogService.getCommandersBlogPosts().subscribe( ( get_blog_posts ) => {
-      console.log(get_blog_posts);
+      //console.log(get_blog_posts);
 
-      //this.marsCommandersBlogs = get_blog_posts;
+      this.marsCommandersBlogs = get_blog_posts;
+
+      //console.log(this.marsCommandersBlogs);
     }, ( err ) => {
       console.log( err );
     });                 

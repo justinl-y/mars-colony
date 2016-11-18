@@ -14,7 +14,6 @@ import { CommandersBlogComponent } from './commanders-blog/commanders-blog.compo
 
 import { RouterModule, Routes } from '@angular/router';
 
-
 const appRoutes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'welcome', component: WelcomeComponent }, // remove from final code

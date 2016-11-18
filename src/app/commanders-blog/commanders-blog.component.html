@@ -1,3 +1,20 @@
-<p>
-  commanders-blog works!
-</p>
+<h1>Encounters</h1>
+
+<div class="button" (click)="onClick($event)">Report Encounter</div>
+
+<ul class="encounter-list">
+  <li *ngFor="let blog of marsCommandersBlogs">
+    <div>
+      <p>ID: {{ blog.id }} | Date: {{ blog.date }} | Title: {{ blog.title.rendered }}</p>
+    </div>
+    <div>
+      <!--<div [innerHTML]="blog.content.rendered"></div>-->
+      <div innerHTML="{{blog.content.rendered}}"></div>
+    </div>
+    <hr>
+  </li>
+</ul>
+s
+<footer>
+  <!--<p>This is the footer</p>-->
+</footer>
