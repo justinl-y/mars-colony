@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { IColonist, Colonist } from '../models';
+
 import 'rxjs/add/operator/map';
 
 @Injectable()

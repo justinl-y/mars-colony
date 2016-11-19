@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import { Colonist, Job, IColonist } from '../models';
+import { Colonist, Job } from '../models'; //IColonist, 
 import JobsService from '../services/jobs.service';
 import ColonistsService from '../services/colonists.service';
 import { cantBe } from '../shared/validators';
@@ -83,9 +83,10 @@ export class RegisterComponent implements OnInit {
 
       //console.log(colonist);
       this.colonistService.submitColonist(colonist).subscribe( ( post_colonist ) => {
-        sessionStorage.setItem('id', post_colonist.id.toString());
+        sessionStorage.setItem( 'colonist_id', post_colonist.id.toString() );
+        sessionStorage.setItem( 'colonist_name', post_colonist.name );
 
-        this.router.navigate(['../encounters']);
+        this.router.navigate( ['../encounters'] );
       }, (err) => {
         console.log(err);
       });

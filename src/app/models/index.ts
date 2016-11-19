@@ -8,9 +8,10 @@ export class Colonist {
 
 export interface IColonist {
      name: string,
+     job: {},
+     //job_id: string,
      id: number,
      age: number,
-     job_id: string,
  }
 
  export class Job {
@@ -77,7 +78,7 @@ export interface ICommanderBlog {
     ping_status: string,
     sticky: boolean,
     format: string,
-    categories: {}, //[]
-    tags: {}, //[]
-    _links: {}
+    categories: {},
+    tags: {},
+    [_links: number]: {}
 }

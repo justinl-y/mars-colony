@@ -4,12 +4,11 @@
   <label for="alien-type">Alien Type</label>
   <select id="alien-type" formControlName="type">
     <option [value]="NO_ALIEN_SELECTED">Select an alien...</option>
-    <option *ngFor="let alien of marsAliens" [value]="alien.type">{{ alien.type }} - {{ alien.id }}</option>
+    <option *ngFor="let alien of marsAliens" [value]="alien.type">{{ alien.type }}</option>
   </select>
 
   <label for="action">Encounter</label>
-  <textarea rows=10 cols="" id="action" placeholder="Action taken" formControlName="action">
-  </textarea>
+  <textarea rows=10 cols="" id="action" placeholder="Action taken" formControlName="action"></textarea>
 
   <button type="">Submit Report</button>
 </form>

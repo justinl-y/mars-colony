@@ -23,10 +23,11 @@ export default class EncountersService {
 
     headers.append( 'Content-Type', 'application/json' );
 
-    //var parameter = '{ "encounter": ' + JSON.stringify(encounter) + '}';
+    var parameter = '{ "encounter": ' + JSON.stringify(encounter) + '}';
+    //var parameter = '"encounter": ' + JSON.stringify(encounter);
     return this.http
         //.post( this.ENCOUNTERS_JSON, encounter, { headers } ) //
-        //.post( this.ENCOUNTERS_JSON, parameter, { headers } ) //
+        //.post( this.ENCOUNTER_JSON, parameter, { headers } ) //
         .post( this.ENCOUNTER_JSON, { encounter }, { headers } ) //
         .map( ( res: Response) => res.json().encounter );
   }

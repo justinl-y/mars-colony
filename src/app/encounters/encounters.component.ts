@@ -13,11 +13,10 @@ export class EncountersComponent implements OnInit {
   marsEncounters: IEncounter[];
 
   constructor( private encountersService: EncountersService,
-               private router: Router, private route: ActivatedRoute ) {
+               private router: Router, 
+               private route: ActivatedRoute ) {
     encountersService.getEncounters().subscribe( ( get_encounters ) => {
       this.marsEncounters = get_encounters;
-
-      //console.log( get_encounters );
     }, ( err ) => {
       console.log( err );
     });
@@ -26,7 +25,7 @@ export class EncountersComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(event) {
+  onClickReportEncounter(event) {
     event.preventDefault();
 
     //console.log('clicked');

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 //class
 export class AppComponent {
   title = 'Mars Colony!';
-  description = 'A colony for mars project';
+  description = 'A colony for Mars project';
 }
 
 //ngModule decorator?
