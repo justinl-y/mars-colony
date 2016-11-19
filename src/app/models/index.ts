@@ -17,14 +17,14 @@ export interface IColonist {
  export class Job {
      constructor(
          public name: string,
-         public description: string
+         public description: string,
      ) {}
  }
 
  export interface IJob {
     name: string,
     id: number,
-    description: string
+    description: string,
  }
 
 export class Encounter {
@@ -56,7 +56,7 @@ export interface IAlien {
     type: string,
     submitted_by: string,
     id: number,
-    description: string;
+    description: string,
 }
 
 export interface ICommanderBlog {
@@ -80,5 +80,5 @@ export interface ICommanderBlog {
     format: string,
     categories: {},
     tags: {},
-    [_links: number]: {}
+    [_links: number]: {},
 }
