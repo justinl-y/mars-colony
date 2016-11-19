@@ -2,10 +2,10 @@ import { Component, OnInit, trigger, state, style, transition, animate } from '@
 
 @Component({
   selector: 'app-welcome',
-  //templateUrl: './welcome.component.html',
-  template: `<h1>Welcome to Mars</h1>
-             <h2>We hope you hope you like your stay!</h2>
-             <a routerLink="/register" routerLinkActive="active">Enter</a>`,
+  templateUrl: './welcome.component.html',
+  //template: `<h1>Welcome to Mars</h1>
+             //<h2>We hope you hope you like your stay!</h2>
+             //<a routerLink="/register" routerLinkActive="active">Enter</a>`,
   styleUrls: ['./welcome.component.scss'],
   animations: [
     trigger('heroState', [

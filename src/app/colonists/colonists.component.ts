@@ -29,6 +29,6 @@ export class ColonistsComponent implements OnInit {
 
   onClickMainMenu( event ) {
     event.preventDefault();
-    //this.router.navigate( [ '../report' ] );
+    this.router.navigate( [ '../menu' ] );
   }
 }

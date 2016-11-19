@@ -30,6 +30,10 @@ export class CommandersBlogComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickMainMenu() {
+    this.router.navigate( ['../menu'] );
+  }
+
 }
 
 

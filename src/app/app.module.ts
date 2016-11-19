@@ -13,10 +13,12 @@ import { ReportComponent } from './report/report.component';
 import { ColonistsComponent } from './colonists/colonists.component';
 import { CommandersBlogComponent } from './commanders-blog/commanders-blog.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MenuComponent } from './menu/menu.component';
 
 const appRoutes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'welcome', component: WelcomeComponent }, // remove from final code
+  { path: 'menu', component: MenuComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'encounters', component: EncountersComponent },
   { path: 'report', component: ReportComponent },
@@ -37,6 +39,7 @@ const appRoutes: Routes = [
     CommandersBlogComponent,
     PageNotFoundComponent,
     CommandersBlogComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

@@ -25,10 +25,15 @@ export class EncountersComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickMainMenu(event) {
+    event.preventDefault();
+    
+    this.router.navigate(['../menu']);
+  }
+
   onClickReportEncounter(event) {
     event.preventDefault();
 
-    //console.log('clicked');
     this.router.navigate(['../report']);
   }
 }

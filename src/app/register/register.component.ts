@@ -86,7 +86,7 @@ export class RegisterComponent implements OnInit {
         sessionStorage.setItem( 'colonist_id', post_colonist.id.toString() );
         sessionStorage.setItem( 'colonist_name', post_colonist.name );
 
-        this.router.navigate( ['../encounters'] );
+        this.router.navigate( ['../menu'] );
       }, (err) => {
         console.log(err);
       });
