@@ -1,7 +1,7 @@
 /* styles for main menu component */
 
 // variables
-$background-colour: #aa98a9;
+$background-colour: rosybrown;
 
 :host {
     width: 100%;
@@ -21,7 +21,8 @@ main {
         margin: 1rem 0 1rem 0;
     }
 
-    div {
+    h2 {
         margin-bottom: 1rem;
+        letter-spacing: 1px;
     }
 }

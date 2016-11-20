@@ -1,6 +1,6 @@
 /*styles for welcome component */
 //variables
-$panel-background-colour: #aa98a9;
+$background-colour: rosybrown;
 
 :host {
     width: 100%;
@@ -26,7 +26,7 @@ main {
 
     section {
         flex: 1 0 100%;
-        background-color: $panel-background-colour;
+        background-color: $background-colour;
         padding: 2rem 0;
 
         p {

@@ -1,19 +1,25 @@
-<h1>Encounters</h1>
+<main class="encounters-list">
+  <h1>Encounters</h1>
 
-<div class="button" (click)="onClickMainMenu($event)">Main Menu</div>
-<div class="button" (click)="onClickReportEncounter($event)">Report Encounter</div>
+  <div class="menu">
+    <h2 class="button" (click)="onClickMainMenu($event)">Main Menu</h2>
+    <h2 class="button" (click)="onClickReportEncounter($event)">Report Encounter</h2>
+  </div>
 
-<ul class="encounter-list">
-  <li *ngFor="let e of marsEncounters">
-    <div>
-      Date: {{ e.date }} | Type: {{ e.atype }}
-    </div>
-    <div>
-      Action: {{ e.action }}
-    </div>
-  </li>
-</ul>
+  <ul class="encounter-list">
+    <li *ngFor="let e of marsEncounters">
+      <div class="li-top-row">
+        <div>
+          <span>Date: </span>{{ e.date }}
+        </div>
+        <div>
+          <span>Type: </span>{{ e.atype }}
+        </div>
+      </div>
+      <div class="li-bottom-row">
+        <span>Action: </span>{{ e.action }}
+      </div>
+    </li>
+  </ul>
 
-<footer>
-  <!--<p>This is the footer</p>-->
-</footer>
+</main>
