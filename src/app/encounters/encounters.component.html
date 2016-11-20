@@ -6,7 +6,10 @@
 <ul class="encounter-list">
   <li *ngFor="let e of marsEncounters">
     <div>
-      ID: {{ e.id }} | Date: {{ e.date }} | Type: {{ e.atype }} | Action: {{ e.action }}
+      Date: {{ e.date }} | Type: {{ e.atype }}
+    </div>
+    <div>
+      Action: {{ e.action }}
     </div>
   </li>
 </ul>

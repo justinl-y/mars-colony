@@ -1,11 +1,11 @@
-<h1>Encounters</h1>
+<h1>Commander's Blog</h1>
 
 <div class="button" (click)="onClickMainMenu($event)">Main Menu</div>
 
 <ul class="encounter-list">
   <li *ngFor="let blog of marsCommandersBlogs">
     <div>
-      <p>{{ blog.title.rendered }}</p>
+      <h2>{{ blog.title.rendered }}</h2>
     </div>
     <div>
       <div innerHTML="{{ blog.content.rendered }}"></div>

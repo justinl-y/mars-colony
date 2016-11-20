@@ -1,9 +1,36 @@
 /*styles for welcome component */
+//variables
+$panel-background-colour: #aa98a9;
 
-p {
-    color: red;
+
+:host {
+    width: 100%;
+    //color: $panel-colour;
 }
 
-h1 {
-    color: green;
+.container {
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    max-width: 500px;
 }
+.welcome-image {
+    flex: 1 0 100%;
+    background: url('../assets/images/solitary_martian.gif') center center no-repeat;
+
+    height: 500px;
+    max-width: 500px;
+}
+
+section {
+    flex: 1 0 100%;
+    background-color: $panel-background-colour;
+    padding: 2rem 0;
+
+    p {
+        padding: 1rem 0 1.2rem 0;
+    }
+}
+

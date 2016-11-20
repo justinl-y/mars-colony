@@ -1,4 +1,5 @@
-import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, OnInit, HostBinding, trigger, state, style, transition, animate } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -7,25 +8,47 @@ import { Component, OnInit, trigger, state, style, transition, animate } from '@
              //<h2>We hope you hope you like your stay!</h2>
              //<a routerLink="/register" routerLinkActive="active">Enter</a>`,
   styleUrls: ['./welcome.component.scss'],
-  animations: [
-    trigger('heroState', [
-      state('inactive', style({
-        backgroundColor: '#eee',
-        transform: 'scale(1)'
-      })),
-      state('active', style({
-        backgroundColor: '#cfd8dc',
-        transform: 'scale(1.1)'
-      })),
-      transition('inactive => active', animate('100ms ease-in')),
-      transition('active => inactive', animate('100ms ease-out'))
+  /*animations: [
+    trigger('routeAnimation', [
+      state('*',
+        style({
+          opacity: 1,
+          transform: 'translateX(0)'
+        })
+      ),
+      transition(':enter', [
+        style({
+          opacity: 0,
+          transform: 'translateX(-100%)'
+        }),
+        animate('0.2s ease-in')
+      ]),
+      transition(':leave', [
+        animate('0.5s ease-out', style({
+          opacity: 0,
+          transform: 'translateY(100%)'
+        }))
+      ])
     ])
-  ]
+  ]*/
 })
 export class WelcomeComponent implements OnInit {
+  /*@HostBinding('@routeAnimation') get routeAnimation() {
+    return true;
+  }
 
-  constructor() { }
+  @HostBinding('style.display') get display() {
+    return 'block';
+  }*/
+
+  constructor(private router: Router, 
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  onClickRegister() {
+    event.preventDefault();
+    this.router.navigate( ['../register'] );
   }
 }

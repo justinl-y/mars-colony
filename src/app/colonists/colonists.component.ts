@@ -16,7 +16,7 @@ export class ColonistsComponent implements OnInit {
                private router: Router,
                private route: ActivatedRoute ) { 
     colonistsService.getColonists().subscribe ( ( get_colonists ) => {
-      console.log(get_colonists);
+      //console.log(get_colonists);
 
       this.marsColonists = get_colonists;
     }, ( err ) => {
