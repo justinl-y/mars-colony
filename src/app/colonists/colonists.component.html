@@ -1,15 +1,17 @@
-<h1>Colonists</h1>
+<main class="colonist-list">
+  <h1>Colonists</h1>
 
-<div class="button" (click)="onClickMainMenu($event)">Main Menu</div>
+  <h2 class="button" (click)="onClickMainMenu($event)">Main Menu</h2>
 
-<ul class="colonist-list">
-  <li *ngFor="let colonist of marsColonists">
-    <div>
-      Name: {{ colonist.name }} | Job: {{ colonist.job.name }}
-    </div>
-  </li>
-</ul>
+  <ul class="colonist-list">
+    <li *ngFor="let colonist of marsColonists">
+      <div>
+        <span>Name:</span> {{ colonist.name }}
+      </div>
+      <div>
+        <span>Job:</span> {{ colonist.job.name }}
+      </div>
+    </li>
+  </ul>
+</main>
 
-<footer>
-  <p>This is the footer</p>
-</footer>
