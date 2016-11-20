@@ -1,0 +1,31 @@
+/* styles for main menu component */
+
+// variables
+$background-colour: #aa98a9;
+
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: 500px;
+    background-color: $background-colour;
+
+    h1 {
+        margin: 1rem 0 1rem 0;
+    }
+
+    div {
+        margin-bottom: 1rem;
+    }
+
+    //div:last-child {
+        //margin-bottom: 0;
+    //}
+}

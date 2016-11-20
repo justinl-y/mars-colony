@@ -12,14 +12,10 @@
     <label for="job">Your Job</label>
     <select id="job" formControlName="job_id">
       <option [value]="NO_JOB_SELECTED">Select a job...</option>
-      <option *ngFor="let job of marsJobs" [value]="job.id">{{ job.name }} - {{ job.id }}</option>
+      <option *ngFor="let job of marsJobs" [value]="job.id">{{ job.name }}</option>
     </select>
 
     <button type="">Register</button>
   </form> 
 
 </main>
-
-
-
-<!-- [disabled]="jobSelected" || registerForm.invalid -->
