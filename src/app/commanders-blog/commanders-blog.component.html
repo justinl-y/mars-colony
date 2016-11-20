@@ -1,18 +1,16 @@
-<h1>Commander's Blog</h1>
+<main class="commanders-blog">
+  <h1>Commander's Blog</h1>
 
-<div class="button" (click)="onClickMainMenu($event)">Main Menu</div>
+  <h2 class="button" (click)="onClickMainMenu($event)">Main Menu</h2>
 
-<ul class="encounter-list">
-  <li *ngFor="let blog of marsCommandersBlogs">
-    <div>
-      <h2>{{ blog.title.rendered }}</h2>
-    </div>
-    <div>
-      <div innerHTML="{{ blog.content.rendered }}"></div>
-    </div>
-    <hr>
-  </li>
-</ul>
-<footer>
-  <p>This is the footer</p>
-</footer>
+  <ul class="encounter-list">
+    <li *ngFor="let blog of marsCommandersBlogs">
+      <div>
+        <h2>{{ blog.title.rendered }}</h2>
+      </div>
+      <div class="blog-text" >
+        <div innerHTML="{{ blog.content.rendered }}"></div>
+      </div>
+    </li>
+  </ul>
+</main>
