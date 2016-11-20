@@ -2,35 +2,44 @@
 //variables
 $panel-background-colour: #aa98a9;
 
-
 :host {
     width: 100%;
     //color: $panel-colour;
+    //background-color: $panel-background-colour;
 }
 
-.container {
+main {
     display: flex;
     justify-content: center;
     //align-items: center;
     flex-flow: column nowrap;
     margin: 0 auto;
     max-width: 500px;
-}
-.welcome-image {
-    flex: 1 0 100%;
-    background: url('../assets/images/solitary_martian.gif') center center no-repeat;
 
-    height: 500px;
-    max-width: 500px;
-}
+    .welcome-image {
+        flex: 1 0 100%;
+        background: url('../assets/images/solitary_martian.gif') center center no-repeat;
 
-section {
-    flex: 1 0 100%;
-    background-color: $panel-background-colour;
-    padding: 2rem 0;
+        height: 500px;
+        max-width: 500px;
+    }
 
-    p {
-        padding: 1rem 0 1.2rem 0;
+    section {
+        flex: 1 0 100%;
+        background-color: $panel-background-colour;
+        padding: 2rem 0;
+
+        p {
+            padding: 1rem 0 1.2rem 0;
+        }
     }
 }
+
+footer {
+    margin: 1rem 0;
+    font-size: 0.75rem;
+}
+
+
+
 

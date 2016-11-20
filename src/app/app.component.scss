@@ -28,9 +28,9 @@
 $base-header-font: 'Distant_Galaxy', sans-serif;
 $base-font: 'Aaargh', sans-serif;
 $base-font-size: 16px;
+$mobile-background-color: #aa98a9;
 $base-background-colour: rosybrown;
 $base-text-colour: #784040;
-
 
 //main styles
 body {
@@ -38,6 +38,7 @@ body {
   font-family: $base-font;
   font-size: $base-font-size;
   background-color: $base-background-colour;
+  //background-color: $mobile-background-color;
   text-align: center;
   color: $base-text-colour;
   line-height: 1;
@@ -51,11 +52,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $base-header-font;
 }
 
-.app-container {
-  
+//.app-container {
   /*height: 100vh;*/
   //display: flex;
   //justify-content: center;
   //align-items: center;
   //margin: 0 auto;
-}
+//}
