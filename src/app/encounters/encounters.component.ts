@@ -27,13 +27,11 @@ export class EncountersComponent implements OnInit {
 
   onClickMainMenu(event) {
     event.preventDefault();
-    
     this.router.navigate(['../menu']);
   }
 
   onClickReportEncounter(event) {
     event.preventDefault();
-
     this.router.navigate(['../report']);
   }
 }

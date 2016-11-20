@@ -1,8 +1,78 @@
-label, input, textarea, select, button {
+
+// variables
+$background-colour: rosybrown;
+$base-text-colour: #784040;
+$base-font: 'Aaargh', sans-serif;
+$base-header-font: 'Distant_Galaxy', sans-serif;
+
+:host {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
-h1, input, select, textarea, button {
-    margin-bottom: 1rem;
+main {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    background-color: $background-colour;
+
+    h1 {
+        margin: 1rem 0 1rem 0;
+    }
+
+    h2 {
+        margin-bottom: .5rem;
+    }
+
+    form {
+        margin: 1rem 0 1rem 0;
+        width: 300px;
+
+        label, input, select, button, textarea {
+            font-family: $base-font;
+            width: 100%;
+            padding: 0.5rem;
+            color: $base-text-colour;
+            border-radius: 5px;
+        }
+
+        input, select, button, textarea {
+            margin-bottom: 1rem;
+            border: 1px solid $base-text-colour; 
+        }
+
+        input, select, textarea {
+            background-color: lightgray;
+            font-size: 0.75rem; 
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            padding-bottom: 0.25rem;
+        }
+
+        select {
+            height: 35px;
+        }
+            
+        button {
+            font-size: 1rem; 
+            margin-top: 1.5rem;
+            font-family: $base-header-font;
+            width: 50%;
+            background-color: #784040;
+            color: lightgray;
+            letter-spacing: 1px;
+        }
+
+        .ng-invalid {
+            border-color: red;
+        }
+    }
 }
+
+
+

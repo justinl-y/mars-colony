@@ -40,6 +40,11 @@ export class ReportComponent implements OnInit {
     return `${ d.getFullYear() }-${ d.getMonth() + 1 }-${ d.getDate() }`;
   };
 
+  onClickEncounters(event) {
+    event.preventDefault();
+    this.router.navigate(['../encounters']);
+  }
+
   onSubmit(event) {
     event.preventDefault();
     
