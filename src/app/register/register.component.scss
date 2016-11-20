@@ -1,14 +1,89 @@
 /*styles for register component */
 
-label, input, select, button {
+// variables
+$background-colour: #aa98a9;
+$base-text-colour: #784040;
+$base-font: 'Aaargh', sans-serif;
+$base-header-font: 'Distant_Galaxy', sans-serif;
+
+:host {
     width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    //flex-flow: column nowrap;
+    //margin: 0 auto;
+    width: 500px;
+
+    background-color: $background-colour;
+
+    h1 {
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+form {
+    //flex: 1 0 100%;
+    margin: 1rem 0 1rem 0;
+
+    width: 300px;
+
+    //display: flex;
+    //justify-content: center;
+    //flex-flow: column nowrap;
+
+    //margin: 0 auto;
+}
+
+label {
     display: block;
 }
 
-h1, input, select, button {
+label, input, select, button {
+    font-family: $base-font;
+    width: 100%;
+    padding: 0.5rem;
+    color: $base-text-colour;
+    border-radius: 5px;
+}
+
+input, select, button {
     margin-bottom: 1rem;
+    
+    border: 1px solid $base-text-colour; 
+}
+
+input, select {
+    background-color: lightgray;
+    font-size: 0.75rem; 
+}
+
+label {
+    text-align: left;
+    padding-bottom: 0.25rem;
+}
+
+select {
+    height: 35px;
+}
+    
+button {
+    font-size: 1rem; 
+    margin-top: 1.5rem;
+    font-family: $base-header-font;
+    width: 50%;
+    background-color: #784040;
+    color: lightgray;
+    letter-spacing: 1px;
 }
 
 .ng-invalid {
-    border-color: red;
-}
+        border-color: red;
+    }
+
