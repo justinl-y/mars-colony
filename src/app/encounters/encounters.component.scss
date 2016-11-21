@@ -46,6 +46,10 @@ main {
 
     .button {
         margin-bottom: 1rem;
+
+        &:hover {
+            color: #8B5742;
+        }
     }
 
     li {

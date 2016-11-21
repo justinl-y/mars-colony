@@ -38,6 +38,12 @@ main {
         letter-spacing: 1px;
     }
 
+    .button {
+        &:hover {
+            color: #8B5742;
+        }
+    }
+
     li {
         margin-left: 2rem;
         margin-right: 2rem;

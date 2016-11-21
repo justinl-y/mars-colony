@@ -28,4 +28,10 @@ main {
         margin-bottom: 1rem;
         letter-spacing: 1px;
     }
+
+    .button {
+        &:hover {
+            color: #8B5742;
+        }
+    }
 }
