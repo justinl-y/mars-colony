@@ -32,8 +32,8 @@ The use of SASS for styling allowed me to increase my knowledge of some aspects 
 
 ##References
 
-Angular 2 - https://angular.io/docs/ts/latest/
-Postman API Developer - https://www.getpostman.com/
+- Angular 2 - https://angular.io/docs/ts/latest/
+- Postman API Developer - https://www.getpostman.com/
 
 ##Known Issues
 When using Firefox links between components don't appear to work. Issue still being investigated at this time.
