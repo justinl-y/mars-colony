@@ -14,6 +14,7 @@ The project was designed the model the registration of a fictitious 'Mars Coloni
 - HTML5
 - SASS
 - Webpack
+- Browser local storage
 
 ## Personal Learnings
 
