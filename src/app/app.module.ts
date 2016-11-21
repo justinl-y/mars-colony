@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-//import { ListTestComponent } from './list-test/list-test.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RegisterComponent } from './register/register.component';
 import { EncountersComponent } from './encounters/encounters.component';
@@ -30,7 +29,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    //ListTestComponent,
     WelcomeComponent,
     RegisterComponent,
     EncountersComponent,
