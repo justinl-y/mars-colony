@@ -1,0 +1,27 @@
+/* page not found */
+
+// variables
+$background-colour: rosybrown;
+
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 500px) {
+        padding-top: 3rem;
+    }
+}
+
+main {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 500px;
+    background-color: $background-colour;
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+}
