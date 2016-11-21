@@ -7,12 +7,15 @@ $background-colour: rosybrown;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 500px) {
+        padding-top: 3rem;
+    }
 }
 
 main {
     padding: 1rem 0;
     display: flex;
-    justify-content: center;
     flex-flow: column nowrap;
     width: 500px;
     background-color: $background-colour;

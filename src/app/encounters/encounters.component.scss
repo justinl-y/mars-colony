@@ -8,6 +8,10 @@ $base-text-colour: #784040;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 500px) {
+        padding-top: 3rem;
+    }
 }
 
 main {
@@ -16,6 +20,11 @@ main {
     justify-content: center;
     flex-flow: column nowrap;
     width: 500px;
+
+    @media (min-width: 768px) {
+        width: 650px;
+    }
+
     background-color: $background-colour;
 
     h1 {

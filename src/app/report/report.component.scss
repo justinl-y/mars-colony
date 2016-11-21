@@ -9,6 +9,10 @@ $base-header-font: 'Distant_Galaxy', sans-serif;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 500px) {
+        padding-top: 3rem;
+    }
 }
 
 main {
