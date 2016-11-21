@@ -16,7 +16,6 @@ import { MenuComponent } from './menu/menu.component';
 
 const appRoutes: Routes = [
   { path: '', component: WelcomeComponent },
-  { path: 'welcome', component: WelcomeComponent }, // remove from final code
   { path: 'menu', component: MenuComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'encounters', component: EncountersComponent },

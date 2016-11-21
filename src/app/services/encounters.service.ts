@@ -12,7 +12,6 @@ export default class EncountersService {
   constructor(private http: Http) {}
 
   getEncounters(): Observable<IEncounter[]> {
-  //getEncounters(): Observable<Object[]> {
     return this.http
         .get(this.ENCOUNTER_JSON)
         .map((res: Response) => res.json().encounters);
@@ -23,11 +22,9 @@ export default class EncountersService {
 
     headers.append( 'Content-Type', 'application/json' );
 
-    var parameter = '{ "encounter": ' + JSON.stringify(encounter) + '}';
-    //var parameter = '"encounter": ' + JSON.stringify(encounter);
+    //var parameter = '{ "encounter": ' + JSON.stringify(encounter) + '}';
+
     return this.http
-        //.post( this.ENCOUNTERS_JSON, encounter, { headers } ) //
-        //.post( this.ENCOUNTER_JSON, parameter, { headers } ) //
         .post( this.ENCOUNTER_JSON, { encounter }, { headers } ) //
         .map( ( res: Response) => res.json().encounter );
   }

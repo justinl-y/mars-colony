@@ -11,15 +11,19 @@ import { Router, ActivatedRoute } from '@angular/router';
 } )
 export class ColonistsComponent implements OnInit {
   marsColonists: IColonist[];
+  // declare loading boolean
   loading: boolean;
  
   constructor( private colonistsService: ColonistsService,
                private router: Router,
                private route: ActivatedRoute ) { 
+    // set loading boolean to true             
     this.loading = true;
 
     colonistsService.getColonists().subscribe ( ( get_colonists ) => {
       this.marsColonists = get_colonists;
+
+      //set loading boolean to false after successful data load
       this.loading = false;
     }, ( err ) => {
       console.log( err );

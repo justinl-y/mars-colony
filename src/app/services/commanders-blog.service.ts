@@ -11,7 +11,6 @@ export default class CommandersBlogService {
 
   constructor(private http: Http) { }
     getCommandersBlogPosts(): Observable<ICommanderBlog[]>{
-    //getCommandersBlogPosts() {
       return this.http
         .get(this.COMMANDERS_BLOG_JSON)
         .map((res: Response) => res.json());
