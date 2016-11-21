@@ -1,7 +1,5 @@
 # Mars Colony App - Angular 2, TypeScript, APIs and SASS
 
-<kbd>![Image of Mars Colony](https://github.com/justinl-y/project-05/blob/master/mars-colony-app.png | width=300 "Mars Colony")</kbd>
-
 <img src="https://github.com/justinl-y/project-05/blob/master/mars-colony-app.png" alt="Image of Mars Colony" width="auto" height="500">
 
 The purpose of this project was to create a mobile-first, single-page application using Angular 2 with TypeScript.
