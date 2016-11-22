@@ -1,6 +1,7 @@
 /*styles for welcome component */
-//variables
-$background-colour: rosybrown;
+
+// import base scss styles
+@import '../scss/_theme.scss'; 
 
 :host {
     width: 100%;
@@ -38,12 +39,8 @@ main {
 
         .button {
             &:hover {
-                color: #8B5742;
+                color: $button-hover-colour
             }
         }
     }
 }
-
-
-
-

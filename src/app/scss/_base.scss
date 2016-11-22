@@ -1,0 +1,21 @@
+// base styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  background-color: $base-background-colour;
+  text-align: center;
+  color: $base-text-colour;
+  line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-header-font;
+}
+
+h1 {
+    font-size: 2rem;
+}

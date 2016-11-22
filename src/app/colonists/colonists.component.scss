@@ -1,8 +1,7 @@
 /* styles for colonist list */
 
-// variables
-$background-colour: rosybrown;
-$base-text-colour: #784040;
+// import base scss styles
+@import '../scss/_theme.scss';
 
 :host {
     width: 100%;
@@ -39,7 +38,7 @@ main {
         margin-bottom: 1rem;
         
         &:hover {
-            color: #8B5742;
+            color: $button-hover-colour;
         }
     }
 

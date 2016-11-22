@@ -1,9 +1,7 @@
+/* styles for report component */
 
-// variables
-$background-colour: rosybrown;
-$base-text-colour: #784040;
-$base-font: 'Aaargh', sans-serif;
-$base-header-font: 'Distant_Galaxy', sans-serif;
+//import base styles scss
+@import '../scss/_theme.scss';
 
 :host {
     width: 100%;
@@ -32,7 +30,7 @@ main {
 
     .button {
         &:hover {
-            color: #8B5742;
+            color: $button-hover-colour;
         }
     }
 
@@ -54,7 +52,7 @@ main {
         }
 
         input, select, textarea {
-            background-color: lightgray;
+            background-color: $form-control-background-colour;
             font-size: 0.75rem; 
         }
 
@@ -73,17 +71,17 @@ main {
             margin-top: 1.5rem;
             font-family: $base-header-font;
             width: 50%;
-            background-color: #784040;
-            color: lightgray;
+            background-color: $base-text-colour;
+            color: $form-control-background-colour;
             letter-spacing: 1px;
 
             &:hover {
-                background-color: #8B5742;
+                background-color: $button-hover-colour;
             }
         }
 
         .ng-invalid {
-            border-color: red;
+            border-color: $form-control-invalid-colour;
         }
     }
 }

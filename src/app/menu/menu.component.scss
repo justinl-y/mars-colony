@@ -1,7 +1,7 @@
 /* styles for main menu component */
 
-// variables
-$background-colour: rosybrown;
+// import base scss styles
+@import '../scss/_theme.scss';
 
 :host {
     width: 100%;
