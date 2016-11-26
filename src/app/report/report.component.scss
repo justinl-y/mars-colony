@@ -56,6 +56,10 @@ main {
             font-size: 0.75rem; 
         }
 
+        select.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched { //.ng-dirty
+            border-color: $form-control-invalid-colour;
+        }
+
         label {
             display: block;
             text-align: left;
@@ -80,9 +84,9 @@ main {
             }
         }
 
-        .ng-invalid {
+        /*.ng-invalid {
             border-color: $form-control-invalid-colour;
-        }
+        }*/
     }
 }
 

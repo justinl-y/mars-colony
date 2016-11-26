@@ -51,9 +51,9 @@ export class RegisterComponent implements OnInit {
     console.log(message);
   })*/
 
-  tooOld(value: number): ValidatorFn {
+  wrongAge(value: number): ValidatorFn {
     return (control: AbstractControl): {[key: string]: any} => {
-      return control.value > 100 ? {'too old': { value }} : null;
+      return control.value < 1 ||control.value > 100 ? {'wrong age': { value }} : null;
     };
   }
 
@@ -64,9 +64,9 @@ export class RegisterComponent implements OnInit {
     }, 2000 );*/
 
     this.registerForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(2)]), 
-      age: new FormControl('', [Validators.required, this.tooOld(100)]), //more validator functions - no negative numbers
-      job_id: new FormControl(this.NO_JOB_SELECTED, [cantBe(this.NO_JOB_SELECTED)])
+      name: new FormControl( '', [Validators.required, Validators.minLength(2)] ),
+      age: new FormControl( '', [Validators.required, this.wrongAge(100)] ),
+      job_id: new FormControl( this.NO_JOB_SELECTED, [cantBe(this.NO_JOB_SELECTED)] )
     });
   }
 
@@ -75,6 +75,11 @@ export class RegisterComponent implements OnInit {
 
     if(this.registerForm.invalid) {
        // for invalid
+       /*if (this.registerForm.get('name').value = '') {
+         console.log('invalid');
+       }*/
+
+
     } else {
       const name = this.registerForm.get('name').value; //check for better way to get values from form
       const age = this.registerForm.get('age').value;

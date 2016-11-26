@@ -21,17 +21,24 @@ main {
     background-color: $background-colour;
 
     h1 {
-        margin: 1rem 0 1rem 0;
+        letter-spacing: 1px;
+        font-size: 1.25rem;
     }
 
     h2 {
+        font-size: 2rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    h3 {
+        font-size:1rem;
         margin-bottom: 1rem;
         letter-spacing: 1px;
     }
 
     .button {
         &:hover {
-            color: #8B5742;
+            color: $button-hover-colour;
         }
     }
 }

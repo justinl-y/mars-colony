@@ -7,9 +7,13 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  colonistName = '';
 
   constructor(private router: Router, 
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+
+    this.colonistName = sessionStorage.getItem( 'colonist_name' );               
+  }
 
   ngOnInit() {
   }
