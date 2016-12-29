@@ -47,7 +47,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickRegister() {
+  onClickRegister(event) {
     event.preventDefault();
     this.router.navigate( ['../register'] );
   }

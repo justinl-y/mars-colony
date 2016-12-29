@@ -18,18 +18,23 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickColonists() {
+  onClickColonists(event) {
     event.preventDefault();
     this.router.navigate( ['../colonists'] );
   }
 
-  onClickEncounters() {
+  onClickEncounters(event) {
     event.preventDefault();
     this.router.navigate( ['../encounters'] );
   }
 
-  onClickCommandersBlog() {
+  onClickCommandersBlog(event) {
     event.preventDefault();
     this.router.navigate( ['../commanders-blog'] );
+  }
+
+  onClickExit(event) {
+    event.preventDefault();
+    this.router.navigate( ['../'] );
   }
 }
