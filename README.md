@@ -37,7 +37,7 @@ The use of SASS for styling allowed me to increase my knowledge of some aspects 
 - Postman API Developer - https://www.getpostman.com/
 
 ## Known Issues
-When using Firefox links between components don't appear to work. Issue still being investigated at this time.
+None.
 
 ## To do
  - Add sorting to data lists for ascending and descending orders.
